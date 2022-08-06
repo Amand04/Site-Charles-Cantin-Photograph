@@ -1,0 +1,165 @@
+--- 
+layout: layout.njk
+---
+    <div class="row">
+        <div class="col">
+            <div class="card-image-index">
+                <div class="slo"> Charles Cantin - Photographe</div>
+                <img class="card-img-top" src="/photos/couple-background.jpg" alt="Card image cap">
+            </div>
+
+        </div>
+    </div>
+
+    <div class="d-flex flex-wrap " id="groupBtn">
+        <button onclick="myform()" value="married" type="submit" class="btn btn-primary m-2" id="ajax-bt">Mariage</button>
+        <button onclick="myform2()" value="pregnancy" class="btn btn-primary m-2" id="ajax-bt">Grossesse</button>
+        <button onclick="myform3()" value="baby" class="btn btn-primary m-2" id="ajax-bt">Bébé</button>
+        <button onclick="myform4()" value="family-photos" class="btn btn-primary m-2" id="ajax-bt">Famille</button>
+        <button onclick="myform5()" value="baptisms-baby" class="btn btn-primary m-2" id="ajax-bt">Baptême</button>
+        <button onclick="myform6()" value="couple" class="btn btn-primary m-2" id="ajax-bt">Couple</button>
+    </div>
+
+    <div class="d-flex flex-wrap" id="buttonReturn">
+        <a class="nav-link" href="/galerie/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+            </svg> Retour</a>
+    </div>
+
+    <div class="d-flex flex-wrap" id="photo">
+    </div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    let d1 = document.getElementById("groupBtn");
+
+    function myform() {
+        event.preventDefault();
+        const url = "https://api.unsplash.com/search/photos?query=married&client_id=8LEVHXYgzDfEZgZNW4DCEK9elyDTaDZ7lkhjOHWz-Dc&per_page=15"
+
+        $.ajax({
+            url: url,
+            type: 'GET',
+
+            success: function(data) {
+                console.log(data)
+
+                data.results.forEach(photo => {
+                    $('#photo').append(`<div class="card" >
+                     <img class="photo-ajax" id="photo-index" src="${photo.urls.regular}" >
+                     </div>
+                    `)
+                })
+                d1.remove();
+            }
+        });
+    };
+
+    function myform2() {
+        event.preventDefault();
+        const url = "https://api.unsplash.com/search/photos?query=pregnancy&client_id=8LEVHXYgzDfEZgZNW4DCEK9elyDTaDZ7lkhjOHWz-Dc&per_page=15"
+
+        $.ajax({
+            url: url,
+            type: 'GET',
+
+            success: function(data) {
+                console.log(data)
+
+                data.results.forEach(photo => {
+                    $('#photo').append(`<div class="card">
+                     <img class="photo-ajax" id="photo-index"  src="${photo.urls.regular}" >
+                     </div>`)
+                })
+                d1.remove();
+            }
+        });
+    };
+
+    function myform3() {
+        event.preventDefault();
+        const url = "https://api.unsplash.com/search/photos?query=baby&client_id=8LEVHXYgzDfEZgZNW4DCEK9elyDTaDZ7lkhjOHWz-Dc&per_page=15"
+
+        $.ajax({
+            url: url,
+            type: 'GET',
+
+            success: function(data) {
+                console.log(data)
+
+                data.results.forEach(photo => {
+                    $('#photo').append(`<div class="card">
+                     <img class="photo-ajax" id="photo-index"  src="${photo.urls.regular}" >
+                     </div>`)
+                })
+                d1.remove();
+            }
+        });
+    };
+
+    function myform4() {
+        event.preventDefault();
+        const url = "https://api.unsplash.com/search/photos?query=family-photos&client_id=8LEVHXYgzDfEZgZNW4DCEK9elyDTaDZ7lkhjOHWz-Dc&per_page=15"
+
+        $.ajax({
+            url: url,
+            type: 'GET',
+
+            success: function(data) {
+                console.log(data)
+
+                data.results.forEach(photo => {
+                    $('#photo').append(`<div class="card">
+                     <img class="photo-ajax" id="photo-index"  src="${photo.urls.regular}" >
+                     </div>`)
+                })
+                d1.remove();
+            }
+        });
+    };
+
+    function myform5() {
+        event.preventDefault();
+        const url = "https://api.unsplash.com/search/photos?query=baptisms-baby&client_id=8LEVHXYgzDfEZgZNW4DCEK9elyDTaDZ7lkhjOHWz-Dc&per_page=15"
+
+        $.ajax({
+            url: url,
+            type: 'GET',
+
+            success: function(data) {
+                console.log(data)
+
+                data.results.forEach(photo => {
+                    $('#photo').append(`<div class="card">
+                     <img class="photo-ajax" id="photo-index"  src="${photo.urls.regular}" >
+                     </div>`)
+                })
+                d1.remove();
+            }
+        });
+    };
+
+    function myform6() {
+        event.preventDefault();
+        const url = "https://api.unsplash.com/search/photos?query=couple&client_id=8LEVHXYgzDfEZgZNW4DCEK9elyDTaDZ7lkhjOHWz-Dc&per_page=15"
+
+        $.ajax({
+            url: url,
+            type: 'GET',
+
+            success: function(data) {
+                console.log(data)
+
+                data.results.forEach(photo => {
+                    $('#photo').append(`<div class="card">
+                     <img class="photo-ajax" id="photo-index"  src="${photo.urls.regular}" >
+                     </div>`)
+                })
+                d1.remove();
+            }
+        });
+    };
+</script>
+
+</html>

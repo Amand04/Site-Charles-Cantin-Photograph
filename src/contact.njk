@@ -1,0 +1,50 @@
+--- 
+layout: layout.njk
+---
+    <div>
+        <div class="contact">
+            <p class="contact-titre">Contact</p>
+        </div>
+    </div>
+
+
+    <section class="container my-3">
+        <div class="row">
+            <div class="col">
+                <form action="https://formspree.io/f/xnqrazva" method="POST">
+
+                    <div class="form-row align-items-center">
+                        <div class="form-group">
+                            <label for="inlineFormInput">Nom</label>
+                            <input type="text" class="form-control mb-2" name="lastname">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email</label>
+                            <input type="email" class="form-control mb-2" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="inlineFormInput">Téléphone</label>
+                            <input type="tel" name="phoneNumber" class="form-control mb-2" id="inlineFormInput">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1" name="message">Message</label>
+                            <textarea class="form-control" type="textarea" name="message" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary m-2" id="contact-bt">Envoyer</button>
+                    </div>
+           
+                </form>
+             </div>
+        </div>
+    </section>
+  <script>
+window.onbeforeunload = () => {
+  for (const form of document.getElementsByTagName("form")) {
+    form.reset();
+  }
+};
+</script>
+</body>
+
+</html>
