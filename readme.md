@@ -18,7 +18,6 @@ Le site comporte 4 pages:
 ## Fabriqué avec
 
 - [visual studio code](https://code.visualstudio.com/) - Editeur de code
-- [Nunjucks](https://www.11ty.dev/docs/languages/nunjucks/) - Moteur de template complet pour javascript
 - [Eleventy](https://www.11ty.dev/) - Générateur de site statique
 - [Github](https://github.com/) - Communauté open source
 - [Forestry](https://forestry.io/) - CMS
