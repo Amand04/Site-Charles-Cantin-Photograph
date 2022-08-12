@@ -8,4 +8,4 @@ fields:
     maxSize: 64
   label: photo
 pages:
-- post/fete.jpg
+- fete.jpg
