@@ -1,4 +1,9 @@
 ---
 label: post_photo
 hide_body: false
-fields: []
+fields:
+- name: photo
+  type: file
+  config:
+    maxSize: 64
+  label: photo
